@@ -5,8 +5,10 @@ export const selectCountiesInfo = (state) => ({
 });
 
 export const selectAllCountries = (state) => state.countries.list;
-export const selectVisibleCounty = (state, { search = "" }) => {
-  return state.countries.list.filter((country) =>
-    country.name.toLowerCase().includes(search.toLowerCase())
+export const selectVisibleCounty = (state, { search = "", region = "" }) => {
+  return state.countries.list.filter(
+    (country) =>
+      country.name.toLowerCase().includes(search.toLowerCase()) &&
+      country.region.includes(region)
   );
 };

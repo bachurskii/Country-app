@@ -9,13 +9,14 @@ import {
   selectVisibleCounty,
 } from "../store/countries/country-selector";
 import { loadCountries } from "../store/countries/countries-actions";
-import { SelectSerch } from "../store/controls/controls-selector";
+import { selectControls } from "../store/controls/controls-selector";
 export const HomePage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const search = useSelector(SelectSerch);
+  const { search, region } = useSelector(selectControls);
+
   const countries = useSelector((state) =>
-    selectVisibleCounty(state, { search })
+    selectVisibleCounty(state, { search, region })
   );
   const { status, error, qty } = useSelector(selectCountiesInfo);
 
