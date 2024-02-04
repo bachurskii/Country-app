@@ -2,7 +2,7 @@
   "name": "countries-flags",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bachurskii.github.io/Country-app/build/index.html",
+  "homepage": "https://bachurskii.github.io/Country-app/",
   "dependencies": {
     "axios": "^0.22.0",
     "lodash.throttle": "^4.1.1",
