@@ -164,9 +164,9 @@ export const Info = (props) => {
           ) : (
             <TagGroup>
               {Array.isArray(neighbords) &&
-                neighbords.map((b) => (
-                  <Tag key={b} onClick={() => push(`/country/${b}`)}>
-                    {b}
+                neighbords.map((neig) => (
+                  <Tag key={neig} onClick={() => push(`/country/${neig}`)}>
+                    {neig}
                   </Tag>
                 ))}
             </TagGroup>
